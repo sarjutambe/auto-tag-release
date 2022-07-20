@@ -4,8 +4,8 @@ LABEL "com.github.actions.description"="Automatically bump semantic version tags
 LABEL "com.github.actions.icon"="git-merge"
 LABEL "com.github.actions.color"="purple"
 
-LABEL "repository"="https://github.com/reececomo/auto-tag-release"
-LABEL "homepage"="https://github.com/reececomo/auto-tag-release"
+LABEL "repository"="https://github.com/sarjutambe/auto-tag-release"
+LABEL "homepage"="https://github.com/sarjutambe/auto-tag-release"
 LABEL "maintainer"="Reece Como"
 
 COPY ./contrib/semver ./contrib/semver
