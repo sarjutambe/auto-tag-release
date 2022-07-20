@@ -1,14 +1,10 @@
-FROM prontotools/alpine-git-curl
-LABEL "com.github.actions.name"="Auto-Tag Release"
-LABEL "com.github.actions.description"="Automatically bump semantic version tags"
-LABEL "com.github.actions.icon"="git-merge"
-LABEL "com.github.actions.color"="purple"
+FROM node:12-alpine3.15
+LABEL "repository"="https://github.com/anothrNick/github-tag-action"
+LABEL "homepage"="https://github.com/anothrNick/github-tag-action"
+LABEL "maintainer"="Nick Sjostrom"
 
-LABEL "repository"="https://github.com/sarjutambe/auto-tag-release"
-LABEL "homepage"="https://github.com/sarjutambe/auto-tag-release"
-LABEL "maintainer"="Reece Como"
-
-COPY ./contrib/semver ./contrib/semver
-RUN install ./contrib/semver /usr/local/bin
 COPY entrypoint.sh /entrypoint.sh
+
+RUN apk update && apk add bash git curl jq && npm install -g semver
+
 ENTRYPOINT ["/entrypoint.sh"]
