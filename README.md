@@ -1,4 +1,4 @@
-# auto-tag-release--new
+# auto-tag-release
 
 A Github Action to automatically bump and tag master, on merge, with the latest semver formatted version.
 
