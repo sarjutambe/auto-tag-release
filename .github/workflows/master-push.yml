@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Tag Release
-      uses: sarjutambe/auto-tag-release@master
+      uses: sarjutambe/auto-tag-release@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: sarjutambe
