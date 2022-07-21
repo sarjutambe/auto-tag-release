@@ -1,0 +1,17 @@
+env:
+
+steps:
+  # ...
+  - name: Install Octopus CLI 🐙
+    uses: OctopusDeploy/install-octopus-cli-action@v1
+    with:
+      version: latest
+
+  - name: Create a release in Octopus Deploy 🐙
+    uses: OctopusDeploy/create-release-action@v2
+    env:
+      OCTOPUS_API_KEY: ${{ secrets.API_KEY  }}
+      OCTOPUS_HOST: ${{ secrets.SERVER }}
+      OCTOPUS_SPACE: 'Spaces-1'
+    with:
+      project: 'auto-tag-release'
