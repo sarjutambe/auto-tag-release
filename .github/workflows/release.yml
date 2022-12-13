@@ -8,7 +8,7 @@ steps:
       version: latest
 
   - name: Create a release in Octopus Deploy 🐙
-    uses: OctopusDeploy/create-release-action@v2
+    uses: OctopusDeploy/create-release-action@v3
     env:
       OCTOPUS_API_KEY: ${{ secrets.API_KEY  }}
       OCTOPUS_HOST: ${{ secrets.SERVER }}
